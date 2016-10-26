@@ -1,0 +1,8 @@
+prefix=/home/cameron/repos/fluffy-guacamole/cnburke/catkin_ws/install
+
+Name: letters_dev
+Description: Description of letters_dev
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/cameron/repos/fluffy-guacamole/cnburke/catkin_ws/install/lib 
+Requires: 
