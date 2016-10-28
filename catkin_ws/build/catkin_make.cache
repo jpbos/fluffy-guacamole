@@ -1,2 +1,0 @@
-letters_dev:simple_navigation_goals
--DCATKIN_DEVEL_PREFIX=/home/cameron/repos/fluffy-guacamole/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/cameron/repos/fluffy-guacamole/catkin_ws/install -G Unix Makefiles
