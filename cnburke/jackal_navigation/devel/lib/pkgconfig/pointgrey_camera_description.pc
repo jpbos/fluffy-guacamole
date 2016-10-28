@@ -1,0 +1,8 @@
+prefix=/home/cameron/repos/fluffy-guacamole/cnburke/jackal_navigation/devel
+
+Name: pointgrey_camera_description
+Description: Description of pointgrey_camera_description
+Version: 0.12.2
+Cflags: 
+Libs: -L/home/cameron/repos/fluffy-guacamole/cnburke/jackal_navigation/devel/lib 
+Requires: 

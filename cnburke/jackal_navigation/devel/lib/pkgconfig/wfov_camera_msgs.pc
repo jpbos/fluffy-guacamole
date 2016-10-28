@@ -1,0 +1,8 @@
+prefix=/home/cameron/repos/fluffy-guacamole/cnburke/jackal_navigation/devel
+
+Name: wfov_camera_msgs
+Description: Description of wfov_camera_msgs
+Version: 0.12.2
+Cflags: -I/home/cameron/repos/fluffy-guacamole/cnburke/jackal_navigation/devel/include
+Libs: -L/home/cameron/repos/fluffy-guacamole/cnburke/jackal_navigation/devel/lib 
+Requires: sensor_msgs message_runtime
