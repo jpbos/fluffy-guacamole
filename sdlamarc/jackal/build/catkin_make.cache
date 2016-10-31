@@ -1,0 +1,2 @@
+
+-DCATKIN_DEVEL_PREFIX=/home/sdlamarc/Repos/fluffy-guacamole/sdlamarc/jackal/devel -DCMAKE_INSTALL_PREFIX=/home/sdlamarc/Repos/fluffy-guacamole/sdlamarc/jackal/install -G Unix Makefiles
