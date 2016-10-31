@@ -1,0 +1,2 @@
+
+-DCATKIN_DEVEL_PREFIX=/home/sal/Repos/fluffy-guacamole/catkin/devel -DCMAKE_INSTALL_PREFIX=/home/sal/Repos/fluffy-guacamole/catkin/install -G Unix Makefiles
