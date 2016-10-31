@@ -1,0 +1,31 @@
+#!/usr/bin/env python
+
+import roslib
+import rospy
+import actionlib
+
+from geometry_msgs.msg import *
+from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal
+
+
+pub = rospy.Publisher("move_base_simple/goal", PoseStamped, queue_size = 10)
+client = actionlib.SimpleActionClient("move_base", MoveBaseAction)
+client.wait_for_server()
+
+target_goal_simple = PoseStamped()
+target_goal = MoveBaseGoal()
+
+    #forming a proper PoseStamped message
+target_goal_simple.pose.position.x = 5;
+target_goal_simple.pose.orientation.w = 1;
+target_goal_simple.header.frame_id = 'base_link';
+target_goal_simple.header.stamp = rospy.Time.now();
+target_goal.target_pose.pose.position.x = 5;
+
+        #sending goal
+pub.publish(target_goal_simple)
+    	
+rospy.init_node()
+client.start()
+rospy.spin()
+

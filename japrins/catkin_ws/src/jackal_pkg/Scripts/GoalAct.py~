@@ -1,0 +1,27 @@
+#! /usr/bin/env python
+
+import roslib
+roslib.load_manifest('jackal_pkg')
+import rospy
+import actionlib
+from geometry_msgs.msg import PoseStamped
+import move_base_msgs.msg 
+
+class DoDishesServer:
+  def __init__(self):
+    self.server = actionlib.SimpleActionServer('move_base_simple/goal', PoseStamped, self.execute, False)
+    self.server.start()
+
+  def execute(self, goal):
+    	   goal = PoseStamped()
+ 	   goal.header.frame_id = "base_link";
+           goal.header.stamp = rospy.Time.now();
+	   goal.pose.position.x = 5.0;
+	   goal.pose.orientation.w = 4.0;
+           self.server.set_succeeded()
+
+
+if __name__ == '__main__':
+  rospy.init_node('')
+  server = DoDishesServer()
+  rospy.spin()

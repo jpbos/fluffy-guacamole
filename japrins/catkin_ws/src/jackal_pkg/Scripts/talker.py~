@@ -1,0 +1,29 @@
+#!/usr/bin/env python
+# BEGIN ALL
+import rospy
+from std_msgs.msg import String
+from geometry_msgs.msg import Twist
+from move_base_msgs.msg import MoveBaseGoal
+
+def talker():
+        pub = rospy.Publisher('move_base', MoveBaseGoal, queue_size=10)
+        rospy.init_node('talker', anonymous=True)
+        rate = rospy.Rate(10) # 10hz
+        while not rospy.is_shutdown():
+
+           goal = MoveBaseGoal()
+           goal.target_pose.header.frame_id = "base_link";
+	   goal.target_pose.header.stamp = rospy.Time.now();
+	   goal.target_pose.pose.position.x = 24.0;
+	   goal.target_pose.pose.orientation.w = 1.0;
+
+           rospy.loginfo(goal)
+           pub.publish(goal)
+           rate.sleep()
+   
+if __name__ == '__main__':
+       try:
+          talker()
+       except rospy.ROSInterruptException:
+          pass
+
