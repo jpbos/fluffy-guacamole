@@ -1,0 +1,7 @@
+/home/sal/Repos/fluffy-guacamole/catkin/build/CMakeFiles/clean_test_results.dir
+/home/sal/Repos/fluffy-guacamole/catkin/build/CMakeFiles/download_extra_data.dir
+/home/sal/Repos/fluffy-guacamole/catkin/build/CMakeFiles/doxygen.dir
+/home/sal/Repos/fluffy-guacamole/catkin/build/gtest/CMakeFiles/gtest.dir
+/home/sal/Repos/fluffy-guacamole/catkin/build/gtest/CMakeFiles/gtest_main.dir
+/home/sal/Repos/fluffy-guacamole/catkin/build/CMakeFiles/run_tests.dir
+/home/sal/Repos/fluffy-guacamole/catkin/build/CMakeFiles/tests.dir
