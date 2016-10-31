@@ -1,0 +1,7 @@
+/home/sdlamarc/Repos/fluffy-guacamole/sdlamarc/jackal/build/CMakeFiles/clean_test_results.dir
+/home/sdlamarc/Repos/fluffy-guacamole/sdlamarc/jackal/build/CMakeFiles/download_extra_data.dir
+/home/sdlamarc/Repos/fluffy-guacamole/sdlamarc/jackal/build/CMakeFiles/doxygen.dir
+/home/sdlamarc/Repos/fluffy-guacamole/sdlamarc/jackal/build/gtest/CMakeFiles/gtest.dir
+/home/sdlamarc/Repos/fluffy-guacamole/sdlamarc/jackal/build/gtest/CMakeFiles/gtest_main.dir
+/home/sdlamarc/Repos/fluffy-guacamole/sdlamarc/jackal/build/CMakeFiles/run_tests.dir
+/home/sdlamarc/Repos/fluffy-guacamole/sdlamarc/jackal/build/CMakeFiles/tests.dir
