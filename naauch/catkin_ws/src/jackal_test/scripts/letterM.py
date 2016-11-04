@@ -12,6 +12,8 @@ def letterM():
     velmsg = Twist()
     pi = math.pi
 
+    rospy.Rate(1).sleep()
+
     for num in range(1,40):
         if rospy.is_shutdown():
             break
@@ -22,6 +24,8 @@ def letterM():
         rospy.loginfo(velmsg)
         pub.publish(velmsg)
         rate.sleep()
+
+    rospy.Rate(1).sleep()
            
     for num in range(1,14):
         if rospy.is_shutdown():
@@ -34,7 +38,9 @@ def letterM():
         pub.publish(velmsg)
         rate.sleep()
 
-    for num in range(1,44):
+    rospy.Rate(1).sleep()
+
+    for num in range(1,54):
         if rospy.is_shutdown():
             break
 
@@ -44,6 +50,8 @@ def letterM():
         rospy.loginfo(velmsg)
         pub.publish(velmsg)
         rate.sleep()
+
+    rospy.Rate(1).sleep()
 
     for num in range(1,10):
         if rospy.is_shutdown():
@@ -56,6 +64,8 @@ def letterM():
         pub.publish(velmsg)
         rate.sleep()
 
+    rospy.Rate(1).sleep()
+
     for num in range(1,44):
         if rospy.is_shutdown():
             break
@@ -67,6 +77,8 @@ def letterM():
         pub.publish(velmsg)
         rate.sleep()
 
+    rospy.Rate(1).sleep()
+
     for num in range(1,15):
         if rospy.is_shutdown():
             break
@@ -77,6 +89,8 @@ def letterM():
         rospy.loginfo(velmsg)
         pub.publish(velmsg)
         rate.sleep()
+
+    rospy.Rate(1).sleep()
 
     for num in range(1,40):
         if rospy.is_shutdown():
