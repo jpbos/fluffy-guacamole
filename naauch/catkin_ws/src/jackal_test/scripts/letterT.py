@@ -74,7 +74,7 @@ def letterT():
   
 if __name__ == '__main__':
     try:
-        talker()
+        letterT()
     except rospy.ROSInterruptException:
         pass
 

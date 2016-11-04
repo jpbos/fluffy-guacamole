@@ -94,7 +94,7 @@ def letterM():
   
 if __name__ == '__main__':
     try:
-        talker()
+        letterM()
     except rospy.ROSInterruptException:
         pass
 
