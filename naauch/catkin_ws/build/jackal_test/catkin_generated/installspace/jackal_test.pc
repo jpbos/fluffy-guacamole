@@ -1,0 +1,8 @@
+prefix=/home/naauch/repos/fluffy-guacamole/naauch/catkin_ws/install
+
+Name: jackal_test
+Description: Description of jackal_test
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/naauch/repos/fluffy-guacamole/naauch/catkin_ws/install/lib 
+Requires: 

@@ -1,0 +1,2 @@
+jackal_test
+-DCATKIN_DEVEL_PREFIX=/home/naauch/repos/fluffy-guacamole/naauch/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/naauch/repos/fluffy-guacamole/naauch/catkin_ws/install -G Unix Makefiles

@@ -1,0 +1,102 @@
+#!/usr/bin/env python
+# BEGIN ALL
+import rospy
+import tf
+from std_msgs.msg import String
+from geometry_msgs.msg import PoseStamped
+import move_base_msgs.msg 
+
+def GoalSet():
+        pi = 3.1415936
+        pub = rospy.Publisher('move_base_simple/goal', PoseStamped, queue_size=1)
+        rospy.init_node('GoalSet', anonymous=True)
+        rate = rospy.Rate(5) # 5hz
+        c = 0
+        while not c ==2:
+            angle = -153.44
+            quaternion = tf.transformations.quaternion_from_euler(0, 0, angle)
+            goal = PoseStamped()
+            goal.header.frame_id = "base_link"
+            goal.header.stamp = rospy.Time.now()
+            goal.pose.position.x = 2.0 #meters
+            goal.pose.position.y = 0
+            goal.pose.position.z = 0
+            goal.pose.orientation.x = quaternion[0]
+            goal.pose.orientation.y = quaternion[1]
+            goal.pose.orientation.z = quaternion[2]
+            goal.pose.orientation.w = quaternion[3]
+
+            rospy.loginfo(goal)
+            pub.publish(goal)
+            c=c + 1
+            rate.sleep()
+
+        rospy.Rate(0.1).sleep()
+        c = 0
+        while not c ==2:
+            angle = 126.87
+            quaternion = tf.transformations.quaternion_from_euler(0, 0, angle)
+            goal = PoseStamped()
+            goal.header.frame_id = "base_link"
+            goal.header.stamp = rospy.Time.now()
+            goal.pose.position.x = 2.23607 #meters
+            goal.pose.position.y = 0
+            goal.pose.position.z = 0
+            goal.pose.orientation.x = quaternion[0]
+            goal.pose.orientation.y = quaternion[1]
+            goal.pose.orientation.z = quaternion[2]
+            goal.pose.orientation.w = quaternion[3]
+
+            rospy.loginfo(goal)
+            pub.publish(goal)
+            c=c + 1
+            rate.sleep()
+
+        rospy.Rate(0.1).sleep()
+        c = 0
+        while not c ==2:
+            angle = -153.44
+            quaternion = tf.transformations.quaternion_from_euler(0, 0, angle)
+            goal = PoseStamped()
+            goal.header.frame_id = "base_link"
+            goal.header.stamp = rospy.Time.now()
+            goal.pose.position.x = 2.23607 #meters
+            goal.pose.position.y = 0
+            goal.pose.position.z = 0
+            goal.pose.orientation.x = quaternion[0]
+            goal.pose.orientation.y = quaternion[1]
+            goal.pose.orientation.z = quaternion[2]
+            goal.pose.orientation.w = quaternion[3]
+
+            rospy.loginfo(goal)
+            pub.publish(goal)
+            c=c + 1
+            rate.sleep()
+
+        rospy.Rate(0.1).sleep()
+        c = 0
+        while not c ==2:
+            angle = 180
+            quaternion = tf.transformations.quaternion_from_euler(0, 0, angle)
+            goal = PoseStamped()
+            goal.header.frame_id = "base_link"
+            goal.header.stamp = rospy.Time.now()
+            goal.pose.position.x = 2.0 #meters
+            goal.pose.position.y = 0
+            goal.pose.position.z = 0
+            goal.pose.orientation.x = quaternion[0]
+            goal.pose.orientation.y = quaternion[1]
+            goal.pose.orientation.z = quaternion[2]
+            goal.pose.orientation.w = quaternion[3]
+
+            rospy.loginfo(goal)
+            pub.publish(goal)
+            c=c + 1
+            rate.sleep()
+           
+    
+if __name__ == '__main__':
+       try:
+          GoalSet()
+       except rospy.ROSInterruptException:
+          pass
