@@ -1,0 +1,26 @@
+<launch>
+
+ <arg name="config" default="base" />
+
+  <param name="robot_description"
+         command="$(find jackal_description)/scripts/env_run
+                    $(find jackal_description)/urdf/configs/$(arg config)
+                    $(find xacro)/xacro $(find jackal_description)/urdf/jackal.urdf.xacro" />
+
+
+<group ns="r1">
+  <include file="$(find test_jack)/launch/robot.launch" >
+    <arg name="init_pose" value="-x 0 -y 0 -z 1.0" />
+    <arg name="ns" value="r1" />
+  </include>
+</group>
+
+
+<group ns="r2">
+  <include file="$(find test_jack)/launch/robot.launch" >
+    <arg name="init_pose" value="-x 1.0 -y 0 -z 1.0" />
+    <arg name="ns" value="r2" />
+  </include>
+</group>
+
+</launch>

@@ -1,0 +1,2 @@
+nre_simmultihusky:test_jack
+-DCATKIN_DEVEL_PREFIX=/home/jbsheppa/test/devel -DCMAKE_INSTALL_PREFIX=/home/jbsheppa/test/install -G Unix Makefiles
