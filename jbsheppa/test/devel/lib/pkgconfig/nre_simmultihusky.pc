@@ -1,0 +1,8 @@
+prefix=/home/jbsheppa/test/devel
+
+Name: nre_simmultihusky
+Description: Description of nre_simmultihusky
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/jbsheppa/test/devel/lib 
+Requires: 

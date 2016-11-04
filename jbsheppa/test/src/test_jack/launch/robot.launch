@@ -1,0 +1,22 @@
+<launch>
+  <arg name="init_pose" default="-x 1 -y 1 -z 1"/>
+  <arg name="ns" default="r0"/>
+  <arg name="tfpre" default="$(arg ns)_tf" />
+
+  <param name="tf_prefix" value="$(arg tfpre)" />
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find test_jack)/xacro/mjack.gazebo.xacro'
+					  ns:=$(arg ns)
+					  tfpre:=$(arg tfpre)
+					  " />
+
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model"
+    args="-urdf -model robot_$(arg ns) -param /$(arg ns)/robot_description $(arg init_pose)" />
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+  <include file="$(find jackal_control)/launch/control.launch" />
+  <include file="$(find jackal_control)/launch/teleop.launch">
+    <arg name="joystick" value="false"/>
+  </include>
+
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/jbsheppa/test/devel
+
+Name: test_jack
+Description: Description of test_jack
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/jbsheppa/test/devel/lib 
+Requires: geometry_msgs roscpp rospy std_msgs
