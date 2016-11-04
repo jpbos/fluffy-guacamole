@@ -24,66 +24,7 @@ def talker():
 
         rospy.loginfo(velmsg)
         pub.publish(velmsg)
-        rate.sleep()
-
-    #Draw T
-    # for num in range(40):
-    #     if rospy.is_shutdown():
-    #         break
-
-    #     velmsg.linear.x = .5
-    #     velmsg.angular.z = 0
-
-    #     rospy.loginfo(velmsg)
-    #     pub.publish(velmsg)
-    #     rate.sleep()
-
-    # for num in range(20):
-    #     if rospy.is_shutdown():
-    #         break
-
-    #     velmsg.linear.x = 0
-    #     velmsg.angular.z = (pi/2)/2
-
-    #     rospy.loginfo(velmsg)
-    #     pub.publish(velmsg)
-    #     rate.sleep()
-
-
-    # for num in range(20):
-    #     if rospy.is_shutdown():
-    #         break
-
-    #     velmsg.linear.x = .5
-    #     velmsg.angular.z = 0
-
-    #     rospy.loginfo(velmsg)
-    #     pub.publish(velmsg)
-    #     rate.sleep()
-
-    # for num in range(20):
-    #     if rospy.is_shutdown():
-    #         break
-
-    #     velmsg.linear.x = 0
-    #     velmsg.angular.z = (pi)/2
-
-    #     rospy.loginfo(velmsg)
-    #     pub.publish(velmsg)
-    #     rate.sleep()
-
-    # for num in range(40):
-    #     if rospy.is_shutdown():
-    #         break
-
-    #     velmsg.linear.x = .5
-    #     velmsg.angular.z = 0
-
-    #     rospy.loginfo(velmsg)
-    #     pub.publish(velmsg)
-    #     rate.sleep()
-
-    
+        rate.sleep()    
          
   
 if __name__ == '__main__':
