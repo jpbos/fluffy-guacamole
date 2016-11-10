@@ -12,99 +12,116 @@ def letterM():
     velmsg = Twist()
     pi = math.pi
 
-    rospy.Rate(1).sleep()
-
-    for num in range(1,40):
+    dist = 2.0      #distance in meters
+    time = 4      #time in seconds
+    angle = 0       #angle in radians
+    corr = 0        #correction to angle 
+    for num in range(time * 10):
         if rospy.is_shutdown():
             break
 
-        velmsg.linear.x = .5
-        velmsg.angular.z = 0
+        velmsg.linear.x = dist/time
+        velmsg.angular.z = (angle+corr)/time
 
         rospy.loginfo(velmsg)
         pub.publish(velmsg)
         rate.sleep()
 
-    rospy.Rate(1).sleep()
-           
-    for num in range(1,14):
+
+    dist = 0.0      #distance in meters
+    time = 2        #time in seconds
+    angle = -2.678  #angle in radians
+    corr = -.2      #correction to angle 
+    for num in range(time * 10):
         if rospy.is_shutdown():
             break
 
-        velmsg.linear.x = 0
-        velmsg.angular.z = -2
+        velmsg.linear.x = dist/time
+        velmsg.angular.z = (angle+corr)/time
 
         rospy.loginfo(velmsg)
         pub.publish(velmsg)
         rate.sleep()
 
-    rospy.Rate(1).sleep()
 
-    for num in range(1,54):
+    dist = math.sqrt(5)#distance in meters
+    time = 4        #time in seconds
+    angle = 0       #angle in radians
+    corr = 0        #correction to angle 
+    for num in range(time * 10):
         if rospy.is_shutdown():
             break
 
-        velmsg.linear.x = .5
-        velmsg.angular.z = 0
+        velmsg.linear.x = dist/time
+        velmsg.angular.z = (angle+corr)/time
 
         rospy.loginfo(velmsg)
         pub.publish(velmsg)
         rate.sleep()
 
-    rospy.Rate(1).sleep()
 
-    for num in range(1,10):
+    dist = 0.0      #distance in meters
+    time = 2        #time in seconds
+    angle = 2.2143  #angle in radians
+    corr = .2       #correction to angle 
+    for num in range(time * 10):
         if rospy.is_shutdown():
             break
 
-        velmsg.linear.x = 0
-        velmsg.angular.z = 2
+        velmsg.linear.x = dist/time
+        velmsg.angular.z = (angle+corr)/time
 
         rospy.loginfo(velmsg)
         pub.publish(velmsg)
         rate.sleep()
 
-    rospy.Rate(1).sleep()
 
-    for num in range(1,44):
+    dist = math.sqrt(5)#distance in meters
+    time = 4        #time in seconds
+    angle = 0       #angle in radians
+    corr = 0        #correction to angle 
+    for num in range(time * 10):
         if rospy.is_shutdown():
             break
 
-        velmsg.linear.x = .5
-        velmsg.angular.z = 0
+        velmsg.linear.x = dist/time
+        velmsg.angular.z = (angle+corr)/time
 
         rospy.loginfo(velmsg)
         pub.publish(velmsg)
         rate.sleep()
 
-    rospy.Rate(1).sleep()
-
-    for num in range(1,15):
+    dist = 0.0      #distance in meters
+    time = 2        #time in seconds
+    angle = -2.678  #angle in radians
+    corr = -.3      #correction to angle 
+    for num in range(time * 10):
         if rospy.is_shutdown():
             break
 
-        velmsg.linear.x = 0
-        velmsg.angular.z = -2
+        velmsg.linear.x = dist/time
+        velmsg.angular.z = (angle+corr)/time
 
         rospy.loginfo(velmsg)
         pub.publish(velmsg)
         rate.sleep()
 
-    rospy.Rate(1).sleep()
-
-    for num in range(1,40):
+    dist = 2.0      #distance in meters
+    time = 4      #time in seconds
+    angle = 0       #angle in radians
+    corr = 0        #correction to angle 
+    for num in range(time * 10):
         if rospy.is_shutdown():
             break
 
-        velmsg.linear.x = .5
-        velmsg.angular.z = 0
+        velmsg.linear.x = dist/time
+        velmsg.angular.z = (angle+corr)/time
 
         rospy.loginfo(velmsg)
         pub.publish(velmsg)
         rate.sleep()
 
-    
-         
+
   
 if __name__ == '__main__':
     try:
