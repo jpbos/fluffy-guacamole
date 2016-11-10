@@ -24,12 +24,14 @@ def letterT():
         pub.publish(velmsg)
         rate.sleep()
 
+    corr = .2
+    angle = pi/2
     for num in range(20):
         if rospy.is_shutdown():
             break
 
         velmsg.linear.x = 0
-        velmsg.angular.z = (pi/2)/2
+        velmsg.angular.z = (angle + corr)/2
 
         rospy.loginfo(velmsg)
         pub.publish(velmsg)
@@ -47,12 +49,14 @@ def letterT():
         pub.publish(velmsg)
         rate.sleep()
 
+    angle = pi
+    corr = .6
     for num in range(20):
         if rospy.is_shutdown():
             break
 
         velmsg.linear.x = 0
-        velmsg.angular.z = (pi)/2
+        velmsg.angular.z = (angle + corr)/2
 
         rospy.loginfo(velmsg)
         pub.publish(velmsg)
