@@ -24,7 +24,7 @@ def letterT():
         pub.publish(velmsg)
         rate.sleep()
 
-    corr = .2
+    corr = .19
     angle = pi/2
     for num in range(20):
         if rospy.is_shutdown():
@@ -50,7 +50,7 @@ def letterT():
         rate.sleep()
 
     angle = pi
-    corr = .6
+    corr = .19
     for num in range(20):
         if rospy.is_shutdown():
             break
