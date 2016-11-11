@@ -30,7 +30,7 @@ def letterU():
     dist = pi       #distance in meters
     time = 4        #time in seconds
     angle = pi      #angle in radians
-    corr = 0        #correction to angle 
+    corr = -.18      #correction to angle 
     for num in range(time * 10):
         if rospy.is_shutdown():
             break
