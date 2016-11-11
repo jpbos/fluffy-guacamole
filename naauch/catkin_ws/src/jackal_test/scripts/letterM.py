@@ -31,7 +31,7 @@ def letterM():
     dist = 0.0      #distance in meters
     time = 2        #time in seconds
     angle = -2.678  #angle in radians
-    corr = -.2      #correction to angle 
+    corr = -.19     #correction to angle 
     for num in range(time * 10):
         if rospy.is_shutdown():
             break
@@ -63,7 +63,7 @@ def letterM():
     dist = 0.0      #distance in meters
     time = 2        #time in seconds
     angle = 2.2143  #angle in radians
-    corr = .2       #correction to angle 
+    corr = .19      #correction to angle 
     for num in range(time * 10):
         if rospy.is_shutdown():
             break
@@ -94,7 +94,7 @@ def letterM():
     dist = 0.0      #distance in meters
     time = 2        #time in seconds
     angle = -2.678  #angle in radians
-    corr = -.3      #correction to angle 
+    corr = -.29     #correction to angle 
     for num in range(time * 10):
         if rospy.is_shutdown():
             break
