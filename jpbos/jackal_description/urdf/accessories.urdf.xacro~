@@ -16,6 +16,10 @@
   <!-- This optional plate mounts both the upgraded GPS and the Velodyne 3D LIDAR. -->
   <xacro:include filename="accessories/bridge_plate.urdf.xacro" />
 
+<!-- If enabled, generate the kinect2 -->
+ <xacro:include filename="accessories/kinect2.urdf.xacro" />
+ 
+
   <!-- If enabled, generate the LASER payload (by default, a SICK LMS111). -->
   <xacro:include filename="accessories/sick_lms1xx_mount.urdf.xacro" />
   <xacro:if value="$(optenv JACKAL_LASER 0)">
@@ -30,17 +34,17 @@
     </joint>
   </xacro:if>
 
- <!-- If enabled, generate the LASER payload (by default, a SICK LMS111). -->
-  <xacro:include filename="accessories/kinect2.urdf.xacro" />
+<!-- If enabled, generate the Kinect2 payload  -->
+  <xacro:include filename="accessories/sick_lms1xx_mount.urdf.xacro" />
   <xacro:if value="$(optenv KINECT2 0)">
-    <sick_lms1xx_mount prefix="$(optenv KINECT_MOUNT front)"
-                       topic="$(optenv KINECT_TOPIC front/scan)"/>
+    <sick_lms1xx_mount prefix="$(optenv JACKAL_KINECT2_MOUNT front)"
+                       topic="$(optenv JACKAL_KINECT2_TOPIC front/scan)"/>
 
-    <joint name="$(optenv JACKAL_LASER_MOUNT front)_laser_mount_joint" type="fixed">
-      <origin xyz="$(optenv JACKAL_LASER_OFFSET 0 0 0)"
-              rpy="$(optenv JACKAL_LASER_RPY 0 0 0)" />
-      <parent link="$(optenv JACKAL_LASER_MOUNT front)_mount" />
-      <child link="$(optenv JACKAL_LASER_MOUNT front)_laser_mount" />
+    <joint name="$(optenv JACKAL_KINECT2_MOUNT front)_kinect2_mount_joint" type="fixed">
+      <origin xyz="$(optenv JACKAL_KINECT2_OFFSET 0 0 0)"
+              rpy="$(optenv JACKAL_KINECT2_RPY 0 0 0)" />
+      <parent link="$(optenv JACKAL_KINECT2_MOUNT front)_mount" />
+      <child link="$(optenv JACKAL_KINECT2_MOUNT front)_laser_mount" />
     </joint>
   </xacro:if>
 

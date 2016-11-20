@@ -34,6 +34,20 @@
     </joint>
   </xacro:if>
 
+<!-- If enabled, generate the Kinect2 payload  -->
+  <xacro:include filename="accessories/kinect2.urdf.xacro" />
+  <xacro:if value="$(optenv KINECT2 0)">
+    <sick_lms1xx_mount prefix="$(optenv JACKAL_KINECT2_MOUNT front)"
+                       topic="$(optenv JACKAL_KINECT2_TOPIC front/scan)"/>
+
+    <joint name="$(optenv JACKAL_KINECT2_MOUNT front)_kinect2_mount_joint" type="fixed">
+      <origin xyz="$(optenv JACKAL_KINECT2_OFFSET 0 0 0)"
+              rpy="$(optenv JACKAL_KINECT2_RPY 0 0 0)" />
+      <parent link="$(optenv JACKAL_KINECT2_MOUNT front)_mount" />
+      <child link="$(optenv JACKAL_KINECT2_MOUNT front)_laser_mount" />
+    </joint>
+  </xacro:if>
+
 
   <!-- If enabled, generate the upgraded Navsat payload (a Novatel Smart6). -->
   <xacro:include filename="accessories/novatel_smart6.urdf.xacro" />
