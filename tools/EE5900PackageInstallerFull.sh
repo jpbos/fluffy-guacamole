@@ -28,19 +28,6 @@ rm pycharm-edu-3.0.tar.gz
 ln -s /opt/pycharm-edu-3.0/bin/pycharm.sh /usr/local/bin/pycharm
 
 mkdir -p /etc/pki/cert
-cp chain.cer /etc/pki/cert
+cp chain.cer /etc/pki/cert/
 
-
-#git clone team repo and rosbook code
-exit #exit root so that repository is owned by current user, catkin won't work without it
-cd ~/
-mkdir repos
-cd repos/
-git clone https://www.github.com/jpbos/fluffy-guacamole
-git clone https://www.github.com/osrf/rosbook
-chown -R $USER ~/Repos
-chgrp -R $USER ~/Repos
-
-mkdir -p /etc/pki/cert
-cp chain.cer /etc/pki/cert
 
