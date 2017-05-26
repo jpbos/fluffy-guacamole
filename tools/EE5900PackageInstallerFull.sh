@@ -28,6 +28,6 @@ rm pycharm-edu-3.0.tar.gz
 ln -s /opt/pycharm-edu-3.0/bin/pycharm.sh /usr/local/bin/pycharm
 
 mkdir -p /etc/pki/cert
-cp chain.cer /etc/pki/cert/
+cp ./chain.cer /etc/pki/cert/
 
 
